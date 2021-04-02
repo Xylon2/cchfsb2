@@ -4,6 +4,9 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from flask import request
+from dotenv import load_dotenv
+load_dotenv()
+
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = re.sub('postgres://', 'postgresql://', os.environ['DATABASE_URL'])
 
@@ -36,7 +39,5 @@ Animal: <input type="text" name="animal">
 eats: <input type="text" name="diet">
 <input type="submit" value="Submit">
 </form>'''
-
-    test = Farm['animal']
     
     return response
