@@ -36,5 +36,7 @@ Animal: <input type="text" name="animal">
 eats: <input type="text" name="diet">
 <input type="submit" value="Submit">
 </form>'''
+
+    test = Farm['animal']
     
     return response
