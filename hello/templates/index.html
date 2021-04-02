@@ -7,9 +7,15 @@
           <li>{{ entry.animal }} eats {{ entry.diet }}</li>
         {%- endfor %}
       </ul>
-      <form action="/" method="post"><br>
-        Animal: <input type="text" name="animal">
-        eats: <input type="text" name="diet">
-        <input type="submit" value="Submit">
+      <form action="/" method="post">
+        <div class="mb-3">
+          <label for="animal1" class="form-label">Animal</label>
+          <input type="text" name="animal" class="form-control" id="animal1">
+        </div>
+        <div class="mb-3">
+          <label for="diet1" class="form-label">eats</label>
+          <input type="text" name="diet" class="form-control" id="diet1">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
       </form>
 {%- endblock %}
