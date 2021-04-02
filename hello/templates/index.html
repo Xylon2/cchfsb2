@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{%- block content %}
+      <h1>Hello World! This environment is "{{ environment }}"</h1>
+      <p>The farm has these animals:</p>
+      <ul>
+        {%- for entry in animals %}
+          <li>{{ entry.animal }} eats {{ entry.diet }}</li>
+        {%- endfor %}
+      </ul>
+      <form action="/" method="post"><br>
+        Animal: <input type="text" name="animal">
+        eats: <input type="text" name="diet">
+        <input type="submit" value="Submit">
+      </form>
+{%- endblock %}
